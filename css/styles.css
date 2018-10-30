@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600i,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+	/* font-family: 'Roboto', sans-serif; */
+	/* font-family: 'Raleway', sans-serif; */
 
 *{
 	box-sizing: border-box;
-	/* font-family: 'Roboto', sans-serif; */
-	/* font-family: 'Raleway', sans-serif; */
 }
 a{
 	text-decoration: none;
@@ -185,39 +185,82 @@ body{
     padding: 75px;
 }
 
-.gallery__item{
-	width: 30%;
-	height: 330px;
-	border: 1px solid red;
+.item{
+	width: 330px;
+	height: 390px;	
 	position: relative;
     overflow: hidden;    
     vertical-align: top;
     margin-bottom: 40px;
     border-radius:  5px;
 }
-.gallery__item-wide{
+.item-wide{
 	width: 65%;
+	height: 100%;
+    border: 1px solid #00f;
 }
 
-.gallery__img,
-.gallery__overlay{
+.item__img{
 	min-width: 100%;
     min-height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(.9);
+    transform: translate(-50%, -50%);
+}
+.item__wide .item__img{
+	width: 115%;
+	height: 100%;
+	font-size: 0;
+}
+.item__overlay{
+	min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-151%, -50%);
+	display: inline-block;
+    background-color: #e10011;
+    text-decoration: none;
+    color: #fff;    
+    transition: all .4s ease-in;
 }
 
-.gallery__overlay{
-	display: inline-block;
-    background-color: rgba(255, 0, 0, .9);
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    opacity: 0;
-    transition: all .8s ease-in-out;
+.item__info{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: capitalize;
+	overflow: hidden;
+	/* width: 225px; */
+	padding: 270px 30px 10px 40px;	
+	border-bottom: 4px solid #fff;
+	/* border: 2px solid #00f; */
+    
 }
-.gallery__item:hover .item__overlay{
-    opacity: 1;
+.item:hover .item__overlay{    
+    transform: translate(-50%, -50%);
 }
+
+.item__info:before,
+.item__info:after{
+	content: '';
+	display: inline-block;	
+	background: #e10011;	
+	position: absolute;
+	top: 79%;
+	height: 50px;
+}
+.item__info:before{
+	width: 40px;	
+	left: 0;
+}
+.item__info:after{
+	width: 60%;
+	right: 0;
+}
+
+
+
