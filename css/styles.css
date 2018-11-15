@@ -351,6 +351,26 @@ body{
     background: url('../img/youtube-logo.png');
 	background-repeat: no-repeat;
     background-size: contain;
+    transform: scale(.5);
+}
+
+.social__item[data-socials="fb"]{
+    background: url('../img/facebook-letter-logo.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+    /* transform: scale(.5); */
+}
+.social__item[data-socials="tw"]{
+    background: url('../img/twitter-logo-silhouette.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+    /* transform: scale(.5); */
+}
+.social__item[data-socials="me"]{
+    background: url('../img/medium.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+    /* transform: scale(.5); */
 }
 .copyright{
 	padding: 35px;
