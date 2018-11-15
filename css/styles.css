@@ -29,7 +29,7 @@ body{
     text-align: right;
 }
 .container{
-	width: 80%;
+	width: 1200px;
 	background-color: transparent;
 	/* border: 1px solid purple; */
 	margin: 0 auto;	
@@ -98,6 +98,8 @@ body{
 	font-size: 0;
 	margin: 45px 0;
 	top: 0;
+	background: radial-gradient(closest-side circle at 800px 240px, #fff, #eee);
+	/* background: #eee; */
 	/* border: 4px solid orange; */
 }
 
@@ -108,7 +110,7 @@ body{
 	padding: 0;
 }
 
-.product__header{
+.product__title{
 	font-size: 15rem;
 	font-weight: 900;
 	padding: 0;
@@ -168,13 +170,17 @@ body{
 
 .gallery{
 	background-color: #fff;
+	width: 1200px;
+	height: 1200px;
 }
-.gallery__header{
+.gallery__title,
+.subscription__title{
 	padding-top: 30px;
 	font-size: 4.8rem;
 }
 
-.gallery__subtitle{	
+.gallery__subtitle,
+.subscription__subtitle{	
 	font-size: 1.8rem;
 	padding: 0 320px;
 }
@@ -186,7 +192,7 @@ body{
 }
 
 .item{
-	width: 330px;
+	width: 30%;
 	height: 390px;	
 	position: relative;
     overflow: hidden;    
@@ -196,8 +202,7 @@ body{
 }
 .item-wide{
 	width: 65%;
-	height: 100%;
-    border: 1px solid #00f;
+	height: 100%;    
 }
 
 .item__img{
@@ -262,5 +267,98 @@ body{
 	right: 0;
 }
 
+.subscription{}
+
+.subscription__title{
+	text-transform: uppercase;
+}
+
+.subscription__subtitle{}
+
+.form{
+	margin: 40px 250px auto;
+	font-size: 0;	
+	padding: 0;
+}
+
+.form__email{
+	font-size: 1.8rem;
+	font-weight: 600;
+	font-style: italic;
+	line-height: 3;
+	color: #979797;
+	width: 500px;
+	margin: 0;
+	padding-left: 60px;
+	border: transparent;
+	border-radius: 35px 0 0 35px;
+	/* outline-style: none; */
+	outline: none;
+}
+
+.form__email::-webkit-input-placeholder::before{
+	content: '';
+	position: absolute;
+	background-image: url("../img/envelope-regular.svg");
+	background-repeat: no-repeat;
+	top: 2px;
+	left: 2px;
+	/* background-position: 12px 11px, 42px 18px, left center; */
+	margin: 5px;
+}
+.form__btn{
+	width: 200px;
+	font-size: 1.8rem;
+	line-height: 3;
+	color: #fff;
+	background: #e10011;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+	margin: 0;
+	padding: 0;
+	border: transparent;
+	border-radius: 0 35px 35px 0;
+	outline: none;
+}
+
+.form__btn:after{
+	content: '\f0da';
+	font-family: "Font Awesome 5 Free";
+	font-style: normal;
+	margin: 5px;	
+}
+
+.social{
+	margin: 60px 400px;
+	padding: 0 10px;
+
+}
+
+.social__item{
+	display: inline-block;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	background-color: #fff;
+	margin: 10px;
+	text-decoration: none;	
+}
+
+.social__item a{
+}
+
+.social__item[data-socials="yt"]{
+    background: url('../img/youtube-logo.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+}
+.copyright{
+	padding: 35px;
+	font-size: 1.8rem;
+	color: #979797;
+}
+
+.copyright a{
+}
 
 
